@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class LocalizationController extends Controller
 {
@@ -11,8 +12,9 @@ class LocalizationController extends Controller
         return view('index');
     }
 
-    public function langChange()
+    public function langChange($locale)
     {
-        # code...
+        Session::put("locale",$locale);
+        return redirect()->back();
     }
 }
