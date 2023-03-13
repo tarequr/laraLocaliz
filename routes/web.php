@@ -15,4 +15,4 @@ use App\Http\Controllers\LocalizationController;
 */
 
 Route::get('/', [LocalizationController::class,'index'])->name('lang.index');
-Route::get('lang/{locale}', [LocalizationController::class,'langChange'])->name('lang.change');
+Route::get('/lang/{locale}', [LocalizationController::class,'langChange'])->name('lang.change');

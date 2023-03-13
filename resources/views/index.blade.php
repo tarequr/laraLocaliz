@@ -30,7 +30,7 @@
 </head>
 
 <body>
-    <h1>Hello, world!</h1>
+    <h1>Hello, world! {{__('Register')}}</h1>
     <div style="float: right;" class="mb-3">
         <ul style="margin: 0px; float: left;">
             <li>
@@ -39,13 +39,18 @@
             <li>
                 <a href="{{ route('lang.change', 'bn') }}" class="active">Bangla</a>
             </li>
+            <li>
+                <a href="{{ route('lang.change', 'zhh') }}">Goga</a>
+            </li>
         </ul>
     </div>
+    {{-- @dd(Session::get("locale")) --}}
+
 
     <div class="container mt-5">
         <div class="row">
             <div class="card shadow">
-                <div class="card-title mt-2"><h2>{{ __('Hello Bangladesh') }}</h2></div>
+                <div class="card-title mt-2"><h2>{{ __('Hello Bangladesh') }} {{ __('message.welcome') }}</h2></div>
                 <div class="card-body">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptatum ipsum necessitatibus
                     amet natus laboriosam numquam consequatur ipsam reiciendis dolorem, distinctio aliquid cum
