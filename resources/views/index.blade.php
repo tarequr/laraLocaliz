@@ -27,7 +27,8 @@
     </style>
 </head>
 
-<body
+<body>
+    <h1>Hello, world! {{__('Register')}}</h1>
     <div style="float: right;" class="mb-3">
         <ul style="margin: 0px; float: left;">
             <li>
@@ -44,7 +45,7 @@
     <div class="container mt-5">
         <div class="row">
             <div class="card shadow">
-                <div class="card-title mt-2"><h2>{{ __('message.welcome') }} {{ __('about') }}</h2></div>
+                <div class="card-title mt-2"><h2>{{ __('message.welcome') }}</h2></div>
                 <div class="card-body">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptatum ipsum necessitatibus
                     amet natus laboriosam numquam consequatur ipsam reiciendis dolorem, distinctio aliquid cum
