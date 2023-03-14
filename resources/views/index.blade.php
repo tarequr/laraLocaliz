@@ -12,13 +12,11 @@
 
             background-color: blueviolet;
         }
-
         li {
             float: left;
             list-style: none;
             padding: 2px;
         }
-
         li a {
             text-decoration: none;
             padding: 5px 25px;
@@ -29,18 +27,14 @@
     </style>
 </head>
 
-<body>
-    <h1>Hello, world! {{__('Register')}}</h1>
+<body
     <div style="float: right;" class="mb-3">
         <ul style="margin: 0px; float: left;">
             <li>
-                <a href="{{ route('lang.change', 'en') }}">English</a>
+                <a href="{{ route('lang.change', 'en') }}" {{ session()->get('locale') == 'en' ? 'selected' : '' }} class="{{ session()->get('locale') == 'en' ? 'active' : '' }}">English</a>
             </li>
             <li>
-                <a href="{{ route('lang.change', 'bn') }}" class="active">Bangla</a>
-            </li>
-            <li>
-                <a href="{{ route('lang.change', 'zhh') }}">Goga</a>
+                <a href="{{ route('lang.change', 'bn') }}" {{ session()->get('locale') == 'bn' ? 'selected' : '' }} class="{{ session()->get('locale') == 'bn' ? 'active' : '' }}">Bangla</a>
             </li>
         </ul>
     </div>
@@ -50,7 +44,7 @@
     <div class="container mt-5">
         <div class="row">
             <div class="card shadow">
-                <div class="card-title mt-2"><h2>{{ __('Hello Bangladesh') }} {{ __('message.welcome') }}</h2></div>
+                <div class="card-title mt-2"><h2>{{ __('message.welcome') }} {{ __('about') }}</h2></div>
                 <div class="card-body">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit voluptatum ipsum necessitatibus
                     amet natus laboriosam numquam consequatur ipsam reiciendis dolorem, distinctio aliquid cum
